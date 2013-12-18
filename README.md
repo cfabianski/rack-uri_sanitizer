@@ -18,7 +18,8 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Rack::URISanitizer is a Rack middleware which cleans up trailing `%` characters in request URI.
+It will replace them with their encoded equivalent `%25`.
 
 ## Contributing
 
