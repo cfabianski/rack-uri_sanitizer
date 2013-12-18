@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.description   = %q{Rack::URISanitizer is a Rack middleware which cleans up } <<
                        %q{trailing % characters in request URI.}
   spec.summary       = spec.description
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/cfabianski/rack-uri_sanitizer"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
