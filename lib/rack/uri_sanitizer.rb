@@ -11,6 +11,12 @@ module Rack
         env['QUERY_STRING'] = env['QUERY_STRING'].gsub(/%(?![0-9a-fA-F]{2})/, '%25')
       end
 
+      if env['REQUEST_METHOD'] == 'POST'
+        rack_input = env['rack.input'].read
+        unless /\A(?:%[0-9a-fA-F]{2}|[^%])*\z/ =~ rack_input
+          env['rack.input'] = StringIO.new(rack_input.gsub(/%(?![0-9a-fA-F]{2})/, '%25'))
+        end
+      end
       @app.call(env)
     end
   end
