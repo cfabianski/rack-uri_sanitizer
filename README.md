@@ -1,6 +1,7 @@
-# Rack::UriSanitizer
-
+[![Gem Version](https://badge.fury.io/rb/rack-uri_sanitizer.svg)](https://badge.fury.io/rb/rack-uri_sanitizer)
 [![Build Status](https://travis-ci.org/cfabianski/rack-uri_sanitizer.png)](https://travis-ci.org/cfabianski/rack-uri_sanitizer)
+
+# Rack::UriSanitizer
 
 Rack::URISanitizer is a Rack middleware which cleans up trailing `%` characters in request URI.
 It will replace them with their encoded equivalent `%25`.
